@@ -1,0 +1,87 @@
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+@keyframes animatedBackgroundtree {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
+body	{ 
+	
+	width: 560px; 
+	height: 400px; 
+	background-image: url(blue.jpg);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 5s linear infinite;
+}
+
+#stat_obj {
+position:relative;
+z-index:0;
+left:0px;
+top:420px;
+width:2000px;
+height:200px;
+
+background-image: url(tree.png);
+background-repeat: repeat-x;
+animation: animatedBackgroundtree 30s linear infinite;
+
+}
+
+#plane {
+    position:absolute;
+	top:50px;
+    width: 100px;
+    height: 100px;
+	left:50 px;
+    z-index:15;
+ transition: width 2s;
+}
+
+#plane:hover {
+   transform: translateY(100px);
+}
+
+#mov_obj {
+position:absolute;
+z-index:1;
+left:2000px;
+top:20px;
+width:250px;
+height:100px;
+background-image: url(missile.png);
+animation: example 5s linear infinite;
+animation-delay: 2s;
+}
+#mov_obj1 {
+position:absolute;
+z-index:1;
+left:2000px;
+top:0px;
+width:250px;
+height:100px;
+background-image: url(missile.png);
+animation: example1 7s linear infinite;
+animation-delay: 5s;
+}
+
+
+@keyframes example {
+    0%   {left:1500px; top:0px;}
+    25%  {left:1200px; top:300px;}
+    50%  { left:900px; top:500px;}
+    75%  { left:600px; top:200px;}
+    85% { left:300px; top:300px}
+    100% { left:0px; top:200px;}
+   }
+@keyframes example1 {
+    0%   {left:1500px; top:100px;}
+    25%  {left:1200px; top:300px;}
+    50%  { left:900px; top:500px;}
+    75%  { left:600px; top:200px;}
+    85% { left:300px; top:300px}
+    100% { left:0px; top:400px;}
+   }
